@@ -32,12 +32,16 @@
     "path": ""
   },
   "excel_columns": {
-    "name_column": "Name",
-    "roll_no_column": "Reg No",
-    "dept_column": "Department"
+    "name_column": "Student Name",
+    "roll_no_column": "Register Number",
+    "dept_column": "Department Name"
   },
   "clean_strings": [
     "BAVADHARANI P",
-    "B\\056Sc CT \\042B\\042"
+    "ARTHI R",
+    "SRI VISHNU N",
+    "B.Sc AIML",
+    "[Name will be overlayed here]",
+    "[Roll No will be overlayed here]"
   ]
 }
