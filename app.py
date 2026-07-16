@@ -306,4 +306,6 @@ def download_certificates(task_id):
     return send_file(task["zip_path"], as_attachment=True, download_name="certificates.zip")
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    port = int(os.environ.get('PORT', 5001))
+    debug_mode = os.environ.get('PORT') is None
+    app.run(debug=debug_mode, host='0.0.0.0', port=port)
