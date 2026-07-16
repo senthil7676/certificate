@@ -1021,7 +1021,22 @@
                         </div>
                     </div>
 
+                    <!-- CLEAN STRINGS FIELD -->
+                    <div class="field-card">
+                        <div class="field-card-header" style="margin-bottom: 0.5rem; border-bottom: none; padding-bottom: 0;">
+                            <span class="field-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+                                Erase Placeholder Text from Template
+                            </span>
+                        </div>
+                        <div class="field-control-group">
+                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem;">Type exact text from template to erase (comma separated):</label>
+                            <input type="text" id="clean-strings-input" value="[Name will be overlayed here], [Roll No will be overlayed here]" placeholder="e.g. [Name will be overlayed here]" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                        </div>
+                    </div>
+
                     <!-- Actions -->
+
                     <div class="action-row">
                         <button class="btn btn-secondary" id="preview-btn" disabled>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -1334,6 +1349,11 @@
 
         // Gather coordinates config
         function getCoordinatesConfig() {
+            const cleanStringsRaw = document.getElementById('clean-strings-input').value;
+            const cleanStrings = cleanStringsRaw.split(',')
+                .map(s => s.trim())
+                .filter(s => s.length > 0);
+                
             return {
                 "name_field": {
                     "enabled": document.getElementById('name-enabled').checked,
@@ -1366,7 +1386,8 @@
                     "name_column": mapNameSelect.value,
                     "roll_no_column": mapRollSelect.value || "Reg No",
                     "dept_column": mapDeptSelect.value || "Department"
-                }
+                },
+                "clean_strings": cleanStrings
             };
         }
 
