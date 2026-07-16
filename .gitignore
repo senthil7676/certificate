@@ -1,0 +1,28 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Workspace temporary directories and logs
+temp_uploads/
+generation.log
+output_certificates/
+.DS_Store
+
+# Calibration and test PDFs
+template_grid.pdf
+test_clean.pdf
+preview_certificate.pdf
+
+# App data directory (Gemini system metadata)
+.gemini/
+.agents/
+task.md
+implementation_plan.md
+walkthrough.md

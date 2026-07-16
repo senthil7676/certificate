@@ -1,0 +1,43 @@
+{
+  "name_field": {
+    "enabled": true,
+    "x": 259.9385,
+    "y": 250.0,
+    "font_size": 13,
+    "font_color": "#000000",
+    "font_name": "Times-Bold",
+    "align": "left"
+  },
+  "dept_field": {
+    "enabled": true,
+    "x": 641.343,
+    "y": 250.0,
+    "font_size": 13,
+    "font_color": "#000000",
+    "font_name": "Times-Roman",
+    "align": "left"
+  },
+  "roll_field": {
+    "enabled": false,
+    "x": 421,
+    "y": 200,
+    "font_size": 12,
+    "font_color": "#000000",
+    "font_name": "Helvetica",
+    "align": "center"
+  },
+  "custom_font": {
+    "enabled": false,
+    "name": "CustomFont",
+    "path": ""
+  },
+  "excel_columns": {
+    "name_column": "Name",
+    "roll_no_column": "Reg No",
+    "dept_column": "Department"
+  },
+  "clean_strings": [
+    "BAVADHARANI P",
+    "B\\056Sc CT \\042B\\042"
+  ]
+}
