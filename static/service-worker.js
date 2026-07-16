@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ngp-certs-v1';
+const CACHE_NAME = 'ngp-certs-v2';
 const ASSETS = [
   '/',
   '/static/logo.png'
