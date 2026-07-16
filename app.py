@@ -5,7 +5,7 @@ import shutil
 import threading
 import zipfile
 import pandas as pd
-from flask import Flask, request, jsonify, send_file, render_template
+from flask import Flask, request, jsonify, send_file, render_template, send_from_directory
 
 # Import existing helpers from generate_certificates
 from generate_certificates import (
@@ -40,6 +40,14 @@ def clean_old_tasks():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/manifest.json')
+def serve_manifest():
+    return send_from_directory('static', 'manifest.json')
+
+@app.route('/service-worker.js')
+def serve_sw():
+    return send_from_directory('static', 'service-worker.js')
 
 @app.route('/api/upload-excel', methods=['POST'])
 def upload_excel():
