@@ -1358,27 +1358,27 @@
             return {
                 "name_field": {
                     "enabled": document.getElementById('name-enabled').checked,
-                    "x": parseFloat(document.getElementById('name-x-num').value),
-                    "y": parseFloat(document.getElementById('name-y-num').value),
-                    "font_size": parseInt(document.getElementById('name-size-num').value),
+                    "x": parseFloat(document.getElementById('name-x-num').value) || 0,
+                    "y": parseFloat(document.getElementById('name-y-num').value) || 0,
+                    "font_size": parseInt(document.getElementById('name-size-num').value) || 12,
                     "font_color": document.getElementById('name-color').value,
                     "font_name": document.getElementById('name-font-name').value,
                     "align": document.getElementById('name-align').value
                 },
                 "dept_field": {
                     "enabled": document.getElementById('dept-enabled').checked,
-                    "x": parseFloat(document.getElementById('dept-x-num').value),
-                    "y": parseFloat(document.getElementById('dept-y-num').value),
-                    "font_size": parseInt(document.getElementById('dept-size-num').value),
+                    "x": parseFloat(document.getElementById('dept-x-num').value) || 0,
+                    "y": parseFloat(document.getElementById('dept-y-num').value) || 0,
+                    "font_size": parseInt(document.getElementById('dept-size-num').value) || 12,
                     "font_color": document.getElementById('dept-color').value,
                     "font_name": document.getElementById('dept-font-name').value,
                     "align": document.getElementById('dept-align').value
                 },
                 "roll_field": {
                     "enabled": document.getElementById('roll-enabled').checked,
-                    "x": parseFloat(document.getElementById('roll-x-num').value),
-                    "y": parseFloat(document.getElementById('roll-y-num').value),
-                    "font_size": parseInt(document.getElementById('roll-size-num').value),
+                    "x": parseFloat(document.getElementById('roll-x-num').value) || 0,
+                    "y": parseFloat(document.getElementById('roll-y-num').value) || 0,
+                    "font_size": parseInt(document.getElementById('roll-size-num').value) || 12,
                     "font_color": document.getElementById('roll-color').value,
                     "font_name": document.getElementById('roll-font-name').value,
                     "align": document.getElementById('roll-align').value
