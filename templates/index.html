@@ -1349,7 +1349,8 @@
 
         // Gather coordinates config
         function getCoordinatesConfig() {
-            const cleanStringsRaw = document.getElementById('clean-strings-input').value;
+            const cleanStringsInput = document.getElementById('clean-strings-input');
+            const cleanStringsRaw = cleanStringsInput ? cleanStringsInput.value : "";
             const cleanStrings = cleanStringsRaw.split(',')
                 .map(s => s.trim())
                 .filter(s => s.length > 0);
